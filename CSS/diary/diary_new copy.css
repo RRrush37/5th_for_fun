@@ -49,6 +49,11 @@ body {
     color: #FFF;
 }
 
+.activity_title h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
 .activity select {
     background-color: #D6D1F0;
 }
@@ -84,8 +89,6 @@ body {
 
 
 
-
-
 .text_nav {
     /* height: 80%; */
     display: flex;
@@ -100,6 +103,9 @@ body {
     font-weight: bold;
 }
 
+
+
+
 .text_nav > div {
     text-align: center;
     /* width: 100%; */
@@ -113,18 +119,23 @@ body {
     /* margin: 1rem auto; */
 }
 
-.text_nav > div ~ div {
+.text_nav div a{
+    color:#634921;
+}
+
+
+.text_nav div ~ div {
     margin-top: 1.5rem;
 }
 
-.text_nav > div:hover {
+.text_nav div a:hover {
     font-weight: bold;
     color: black;
     /* background-color: #ffffff45; */
     /* border-radius: 10px; */
 }
 
-.text_nav > div.on{
+.text_nav div.on a{
     font-weight: bold;
     color: black;
     /* background-color: #ffffff45; */
@@ -132,7 +143,7 @@ body {
 }
 
 
-.text_nav > div::before {
+.text_nav div::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -145,10 +156,9 @@ body {
     transition: transform 0.2s ease-in-out;
 }
 
-.text_nav > div:hover::before {
+.text_nav div:hover::before {
     transform: scaleX(1);
 }
-
 
 
 /* -------------導覽列裡面的大頭貼------- */
@@ -227,9 +237,9 @@ body {
 .middle{
     background-color: #847062cf;
     padding: 25px;
-    height: 69vh;
+    /* height: 69vh;
     overflow-y: scroll;
-    scrollbar-gutter: stable both-edges;
+    scrollbar-gutter: stable both-edges; */
 }
 
 
@@ -238,9 +248,6 @@ body {
     /* width: 100%;
     display: flex;
     align-items: flex-start; */
-
-
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -272,10 +279,10 @@ body {
     padding: 25px;
 
     border: 1ps solid red;
-
-    height: 69vh;
-    overflow-y: scroll;
-    scrollbar-gutter: stable both-edges;
+/* 
+    height: 69vh; */
+    /* overflow-y: scroll;
+    scrollbar-gutter: stable both-edges; */
 }
 
 .activity_article {
@@ -283,27 +290,361 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
     padding: 20px;
 }
 
-
+/*--------個人資料介紹-------------*/
 
 .introduce{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    padding:3px;
 }
 
-.confirm{
+
+
+
+.introduce .introduce_left input:disabled{
+    width: 80%;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    border-top-width:0px ;
+    border-left-width:0px ;
+    border-right-width:0px ;
+    border-bottom-width:1px ;
+    margin: 3px 5px;
+    padding: 3px;
+    color: white;
+}
+
+
+
+
+.introduce .introduce_left .sex{
+    width: auto;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.introduce .introduce_left .sex label{
+    width: 100%;
+}
+
+
+
+
+.introduce .introduce_right input:disabled{
+    width: 80%;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    border-top-width:0px ;
+    border-left-width:0px ;
+    border-right-width:0px ;
+    border-bottom-width:1px ;
+    margin: 3px 5px;
+    padding: 3px;
+    color: white;
+}
+
+.introduce .introduce_right input,
+.introduce .introduce_left input{
+    background-color: white;
+    color: #000;
+}
+/* 
+#hight{
+
+}
+
+#interest{
+    width: 80%;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    border-top-width:0px ;
+    border-left-width:0px ;
+    border-right-width:0px ;
+    border-bottom-width:1px ;
+    margin: 3px 5px;
+    padding: 3px;
+}
+#email{
+    width: 80%;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    border-top-width:0px ;
+    border-left-width:0px ;
+    border-right-width:0px ;
+    border-bottom-width:1px ;
+    margin: 3px 5px;
+    padding: 3px;
+}
+
+
+
+#soubriquet{
+    width: 80%;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    border-top-width:0px ;
+    border-left-width:0px ;
+    border-right-width:0px ;
+    border-bottom-width:1px ;
+    margin: 3px 5px;
+    padding: 3px;
+}
+
+
+#introduce_right{
+    width: 80%;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    border-top-width:0px ;
+    border-left-width:0px ;
+    border-right-width:0px ;
+    border-bottom-width:1px ;
+    margin: 3px 5px;
+    padding: 3px;
+}
+
+#weight{
+    width: 80%;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    border-top-width:0px ;
+    border-left-width:0px ;
+    border-right-width:0px ;
+    border-bottom-width:1px ;
+    margin: 3px 5px;
+    padding: 3px;
+}
+
+#constellation{
+    width: 80%;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    border-top-width:0px ;
+    border-left-width:0px ;
+    border-right-width:0px ;
+    border-bottom-width:1px ;
+    margin: 3px 5px;
+    padding: 3px;
+}
+
+#birthday{
+    width: 80%;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    border-top-width:0px ;
+    border-left-width:0px ;
+    border-right-width:0px ;
+    border-bottom-width:1px ;
+    margin: 3px 5px;
+    padding: 3px;
+} */
+
+#myselfsign{
+    width: 100%;
+}
+
+
+
+    /* background-color: transparent;
+    border-bottom: 1px solid white;
+    border-top-width:0px ;
+    border-left-width:0px ;
+    border-right-width:0px ;
+    border-bottom-width:1px ;
+    margin: 3px 5px;
+    padding: 3px; 
+}  */ 
+
+.middle .button{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+.middle .button .cancel{
     border: none;
     padding: 10px 20px;
     background-color: #665448;
     color: white;
     border-radius: 30px;
     font-size: 2rem;
+    cursor: pointer;
 }
+
+.middle .button .confirm{
+    border: none;
+    padding: 10px 20px;
+    background-color: #F9DE9A;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+.middle .button .editBtn{
+    border: none;
+    padding: 10px 20px;
+    background-color: #F9DE9A;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+
+/*-----------------*/
+.activity_main .right {
+    width: 20.8%;
+    color: #000;
+    height: 75vh;
+    overflow-y: scroll;
+}
+
+/* --------------活動右側欄-日曆-------------- */
+.calendar {
+    color: #fff;
+    background-color: #847062a1;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 0 5px;
+    border-bottom: #847062a1 5px solid; 
+}
+
+.right .body {
+    height: 251.97px;
+    background-color: #fff;
+}
+
+.body-list ul {
+    width: 100%;
+    font-size: 14px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.body-list ul li {
+    width: 14.28%;
+    height: 36px;
+    line-height: 36px;
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+
+ul.weekdays li{
+    cursor:default;
+}
+
+#next {
+    color: #502e2e;
+}
+
+.light {
+    color: #42424256;
+}
+
+.dark {
+    color: #424242;
+}
+
+.main_color {
+    color: #FFF;
+}
+
+.todaybox {
+    border: 1px solid #775050;
+    background: #847062a1;
+}
+
+/* --------------活動右側欄-活動簡述-------------- */
+.right .my_activity {
+    padding: 20px;
+    background-color: #847062cf;
+    margin-top: 20px;
+    clear: both;
+}
+
+.right .my_activity h2 {
+    color: #FFF;
+    -webkit-text-stroke: #000 1px;
+    font-weight: 700;
+    text-shadow: 0 4px 4px #0000004e;
+    text-align: center;
+    padding: 9px 0;
+}
+
+.right .my_activity p {
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.right .my_activity section {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.right .my_activity a {
+    display: block;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.right .my_activity a img {
+    width: 80%;
+}
+
+h3{
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+
+/*-----捲軸改色--------*/
+/* .activity_article::-webkit-scrollbar-thumb {
+    background: #634921;
+}
+
+.activity_article::-webkit-scrollbar-track {
+    background: none;
+}
+
+.activity_article::-webkit-scrollbar-track {
+    background: #634921;
+    border-radius: 10px;
+} */
+
+
+
+
+
+.right::-webkit-scrollbar-thumb {
+    background: #634921;
+}
+
+.right::-webkit-scrollbar-track {
+    background: none;
+}
+
+.right::-webkit-scrollbar-track {
+    background: #634921;
+    border-radius: 10px;
+}
+
 
 
 
